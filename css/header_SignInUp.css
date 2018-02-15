@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    font-family: 'Gudea', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 166, 237);
+}
+
+/*---- header ----*/
+
+header{
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../pict/back1.jpg);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header ul{
+    background-color: rgba(174, 242, 19, 0.65);
+    margin: 0px;
+    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+    padding: 3px;
+}
+
+header li{
+    text-align: center;
+    font-family: 'Amaranth', sans-serif;
+    flex: 1 1 0;
+    padding: 20 15 20 15;
+    margin: 0px;
+    border-left: solid 2px;
+    border-color: rgba(150, 217, 16, 0.33);
+}
+
+header h1{
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5 5 30 5;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 400%;
+}
+
+header li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+header li:hover{
+    border-radius: 3px;
+    background-image: rgba(111, 155, 10, 0.65);
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, rgba(174, 242, 19, 0.2), rgba(85, 150, 19, 0.7));
+    background-image: -moz-linear-gradient(top, rgba(174, 242, 19, 0.2), rgba(85, 150, 19, 0.7));
+    background-image: -ms-linear-gradient(top, rgba(174, 242, 19, 0.2), rgba(85, 150, 19, 0.7));
+    background-image: -o-linear-gradient(top, rgba(174, 242, 19, 0.2), rgba(85, 150, 19, 0.7));
+    background-image: linear-gradient(to bottom, rgba(174, 242, 19, 0.2), rgba(85, 150, 19, 0.7));
+    text-decoration: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+/*---- header END ----*/
+
+/*---- main ----*/
+
+/*---- Sign up/in ----*/
+
+.login-box{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login-box div{
+    display: block;
+    margin: auto;
+    margin-top: 15%;
+    height: 350px;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.login-box img{
+    height: 100px;
+    position: absolute;
+    margin: -60 0 0 125;
+    z-index: 1;
+}
+
+.login-box h2{
+    padding: 50 0 0 0;
+    text-align: center;
+    color: rgba(42, 79, 235, 0.88)
+}
+
+.login-box form{
+    margin: 30 50 30 50;
+}
+.login-box input{
+    font-family: 'Gudea', sans-serif;
+    border: none;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    padding-left: 30px;
+    margin: 10 0 0 0;
+}
+.input-mail{
+    background-image: url(../pict/icons8-customer-50.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position:left;
+}
+
+.input-password{
+    background-image: url(../pict/icons8-lock-50.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position:left;
+}
+
+.login-box input[type='submit']{
+    background-color: 00a6ed;
+    border-radius: 5px;
+    width: 45%;
+    height: 40px;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+.login-box input[type='submit']:hover{
+    background-color: rgba(0, 166, 237, 0.8);
+    cursor: pointer;
+}
+.login-box a{
+    position: absolute;
+    margin: 10 0 0 -10;
+}
+
+
+.login-box a:hover{
+    color: rgba(0, 166, 237, 0.8);
+    cursor: pointer;
+}
+
+.login-box i{
+    margin: 5 0 0 325;
+    position: absolute;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.55);
+}
+.login-box i:hover{
+    cursor: pointer;
+    text-shadow: 1px 1px rgba(5, 41, 67, 0.4);
+}
+
+#forget_password div{
+    height:250px;
+}
+
+#regist{
+    height: 400px;
+}
+
+/*---- Sign up/in END ----*/
+.hidden{
+    display: none;
+}
+
+/*---- main END ----*/
