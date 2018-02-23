@@ -79,8 +79,8 @@ header li:hover{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    height:100%;
+    z-index: 1;
 }
 
 .login-box div{

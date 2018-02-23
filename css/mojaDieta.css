@@ -65,11 +65,9 @@ h1{
     text-align: center;
     font-family: 'Amaranth', sans-serif;
     flex: 1 1 0;
-    padding: 10 1 10 1;
+    padding: 10 0;
     border: solid 2px;
     border-color: rgba(150, 217, 16, 0.4);
-    min-width: 90px;
-    width: 20%;
     height: 40px;
     float: left;
 }
