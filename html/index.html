@@ -5,217 +5,26 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="Shortcut icon" href="../pict/logo.png" />		
-        <link rel="stylesheet" href="../css/header_SignInUp.css" />
-        <link rel="stylesheet" href="../css/mojaDieta.css" />        
+        <link rel="stylesheet" href="../css/SignInUp.css" />
         <link href="https://fonts.googleapis.com/css?family=Amaranth|Gudea|Pacifico" rel="stylesheet">
-        <script src="https://use.fontawesome.com/cac9e54009.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        
         
 	</head>
 	<body>
-        <header>
-            <ul>
-                <li><a href="#">Moja dieta</a></li>
-                <li><a href="../html/ulozDiete.html">Ułóż dietę</a></li>
-                <li><a href="#">Przepisy</a></li>
-                <li><a href="#">Kalkulatory</a></li>
-                <li id="login-button"><a href="#">Logowanie</a></li>
-                <li id="signup-button"><a href="#">Rejestracja</a></li>
-            </ul>
-            <div>
-                <h1>Sprintem Po Zdrowie</h1>
-            </div>
-        </header>
         <main>
         <!-- Sign in -->
-            <section class="login-box hidden">
-                <div id='login'>
-                    <i class="fa fa-window-close-o" aria-hidden="true"></i>
-                    <img src="../pict/sign.png">
+            <section class="login-box">
+                <div>
                     <h2>Zaloguj się:</h2>
                     <form>
                         <input type="text" name="" placeholder="Email" class="input-mail">
                         <input type="password" name="" placeholder="********" class="input-password">
                         <input type="submit" name="" value="Zaloguj">
-                        <a href="#">Zapomniałem hasła</a>
                     </form>
                 </div>
             </section>
-        <!-- Forget password -->
-            <section class='login-box hidden' id='forget_password'>
-                <div>
-                    <i class="fa fa-window-close-o" aria-hidden="true"></i>
-                    <h2>Przypomnij hasło:</h2>
-                    <form>
-                        <input type="text" name="" placeholder="Email" class="input-mail">
-                        <input type="submit" name="" value="Przypomnij hasło">
-                    </form>
-                </div>
-            </section>
-        <!-- Sign Up -->
-            <section class="login-box hidden">
-                <div id="regist">
-                    <i class="fa fa-window-close-o" aria-hidden="true"></i>
-                    <img src="../pict/sign.png">
-                    <h2>Zarejestruj się:</h2>
-                    <form>
-                        <input type="text" name="" placeholder="Email" class="input-mail">
-                        <input type="password" name="" placeholder="hasło" class="input-password">
-                        <input type="password" name="" placeholder="Powtórz hasło" class="input-password">
-                        <input type="submit" name="" value="Zarejestruj">
-                        <a href="#">Posiadam konto</a>
-                    </form>
-                </div>
-            </section>
-            <div id="mealTable">
-                <h1>Twoja Dieta:</h1>
-                <div id="dataPicker">
-                    <div class="hButton"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
-                    <ul id='some'>
-                        <li>Poniedziałek<br />30.10</li>
-                        <li>Wtorek<br />31.10</li>
-                        <li>Środa<br />01.11</li>
-                        <li>Czwartek<br />02.11</li>
-                        <li>Piątek<br />03.11</li>
-                        <li>Sobota<br />04.11</li>
-                        <li>Niedziela<br />05.11</li>
-                        <li>Poniedziałek<br />30.10</li>
-                        <li>Wtorek<br />31.10</li>
-                        <li>Środa<br />01.11</li>
-                        <li>Czwartek<br />02.11</li>
-                        <li>Piątek<br />03.11</li>
-                        <li>Sobota<br />04.11</li>
-                        <li>Niedziela<br />05.11</li>
-                    </ul>
-                    <div class="hButton"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
-                    <div style="clear:both"></div>    
-                </div>
-                <div class='vButton'><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
-                <div id=container>
-                    <!---- sniadanie ---->
-                    <div class="meals">
-                        <h2>Śniadanie:</h2>
-                        <ul>
-                            <li>Produkt 1 cos innego : 30g</li>
-                            <li>Produkt 2 cos tam : 30g</li>
-                            <li>Produkt 3 byle co : 30g</li>
-                            <li>Produkt 4 jakies : 30g</li>
-                            <li>Produkt 5 jakis : 30g</li>
-                        </ul>
-                        <p>SPOSÓB PRZYRZĄDZENIA: Ziemniaki obrać, umyć i pokroić na
-        mniejsze kawałki. Kalafior umyć i podzielić na różyczki.
-        Łososia opłukać , osuszyć, pokroić na mniejsze kawałki
-        ,skropić sokiem cytrynowym i odstawić do lodówki. Ziemniaki
-        ugotować w osolonej wodzie. Pietruszkę obrać i umyć, włożyć
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        pokrojoną pietruszkę i gotować około 15 minut. Na ostatnie 5
-        minut dodać różyczki kalafiora. Doprawić solą, pieprzem.
-        Przełożyć wszystko na na talerze i posypać siekanym
-        koperkiem. podawać z łyżeczką masła.</p>
-                    </div>
-                    <!---- 2 sniadanie ---->
-                    <div class="meals hidden">
-                        <h2>II Śniadanie:</h2>
-                        <ul>
-                            <li>Produkt 1 cos innego : 30g</li>
-                            <li>Produkt 2 cos tam : 30g</li>
-                            <li>Produkt 3 byle co : 30g</li>
-                            <li>Produkt 4 jakies : 30g</li>
-                            <li>Produkt 5 jakis : 30g</li>
-                        </ul>
-                        <p>SPOSÓB PRZYRZĄDZENIA: Ziemniaki obrać, umyć i pokroić na
-        mniejsze kawałki. Kalafior umyć i podzielić na różyczki.
-        Łososia opłukać , osuszyć, pokroić na mniejsze kawałki
-        ,skropić sokiem cytrynowym i odstawić do lodówki. Ziemniaki
-        ugotować w osolonej wodzie. Pietruszkę obrać i umyć, włożyć
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        pokrojoną pietruszkę i gotować około 15 minut. Na ostatnie 5
-        minut dodać różyczki kalafiora. Doprawić solą, pieprzem.
-        Przełożyć wszystko na na talerze i posypać siekanym
-        koperkiem. podawać z łyżeczką masła.</p>
-                    </div>
-                    <!---- obiad ---->
-                    <div class="meals hidden">
-                        <h2>Obiad:</h2>
-                        <ul>
-                            <li>Produkt 1 cos innego : 30g</li>
-                            <li>Produkt 2 cos tam : 30g</li>
-                            <li>Produkt 3 byle co : 30g</li>
-                            <li>Produkt 4 jakies : 30g</li>
-                            <li>Produkt 5 jakis : 30g</li>
-                        </ul>
-                        <p>SPOSÓB PRZYRZĄDZENIA: Ziemniaki obrać, umyć i pokroić na
-        mniejsze kawałki. Kalafior umyć i podzielić na różyczki.
-        Łososia opłukać , osuszyć, pokroić na mniejsze kawałki
-        ,skropić sokiem cytrynowym i odstawić do lodówki. Ziemniaki
-        ugotować w osolonej wodzie. Pietruszkę obrać i umyć, włożyć
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        pokrojoną pietruszkę i gotować około 15 minut. Na ostatnie 5
-        minut dodać różyczki kalafiora. Doprawić solą, pieprzem.
-        Przełożyć wszystko na na talerze i posypać siekanym
-        koperkiem. podawać z łyżeczką masła.</p>
-                    </div>
-                    <!---- Podwieczorek ---->
-                    <div class="meals hidden">
-                        <h2>Podwieczorek:</h2>
-                        <ul>
-                            <li>Produkt 1 cos innego : 30g</li>
-                            <li>Produkt 2 cos tam : 30g</li>
-                            <li>Produkt 3 byle co : 30g</li>
-                            <li>Produkt 4 jakies : 30g</li>
-                            <li>Produkt 5 jakis : 30g</li>
-                        </ul>
-                        <p>SPOSÓB PRZYRZĄDZENIA: Ziemniaki obrać, umyć i pokroić na
-        mniejsze kawałki. Kalafior umyć i podzielić na różyczki.
-        Łososia opłukać , osuszyć, pokroić na mniejsze kawałki
-        ,skropić sokiem cytrynowym i odstawić do lodówki. Ziemniaki
-        ugotować w osolonej wodzie. Pietruszkę obrać i umyć, włożyć
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        pokrojoną pietruszkę i gotować około 15 minut. Na ostatnie 5
-        minut dodać różyczki kalafiora. Doprawić solą, pieprzem.
-        Przełożyć wszystko na na talerze i posypać siekanym
-        koperkiem. podawać z łyżeczką masła.</p>
-                    </div>
-                    <!----kolacja---->
-                    <div class="meals hidden">
-                        <h2>Kolacja:</h2>
-                        <ul>
-                            <li>Produkt 1 cos innego : 30g</li>
-                            <li>Produkt 2 cos tam : 30g</li>
-                            <li>Produkt 3 byle co : 30g</li>
-                            <li>Produkt 4 jakies : 30g</li>
-                            <li>Produkt 5 jakis : 30g</li>
-                        </ul>
-                        <p>SPOSÓB PRZYRZĄDZENIA: Ziemniaki obrać, umyć i pokroić na
-        mniejsze kawałki. Kalafior umyć i podzielić na różyczki.
-        Łososia opłukać , osuszyć, pokroić na mniejsze kawałki
-        ,skropić sokiem cytrynowym i odstawić do lodówki. Ziemniaki
-        ugotować w osolonej wodzie. Pietruszkę obrać i umyć, włożyć
-        do naczynia do gotowania na parze. Łososia oprószyć solą i
-        pieprzem i wstawić do naczynia do gotowania na parze na
-        pokrojoną pietruszkę i gotować około 15 minut. Na ostatnie 5
-        minut dodać różyczki kalafiora. Doprawić solą, pieprzem.
-        Przełożyć wszystko na na talerze i posypać siekanym
-        koperkiem. podawać z łyżeczką masła.</p>
-                    </div>
-                </div>
-                <div class='vButton'><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
-            </div>
-        <!-- End Sign Up/In --> 
         </main>
         <script src="../JavaScript/signInUp.js"></script>
-        <script src="../JavaScript/mojaDieta.js"></script>
 	</body>
 </html>

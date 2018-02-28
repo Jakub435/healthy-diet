@@ -6,6 +6,10 @@ h1{
     
 }
 
+.hidden{
+    display: none;
+}
+
 .vButton{
     width: 92%;
     margin: 0 auto;

@@ -4,20 +4,19 @@
 		<title>zdrowePosilki.pl</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="Shortcut icon" href="../pict/logo.png" />		
-        <link rel="stylesheet" href="../css/header_SignInUp.css" />
-        <link rel="stylesheet" href="../css/ulozDiete.css" />        
+        <link rel="Shortcut icon" href="../pict/logo.png" />
+        <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/ulozDiete.css" />
         <link href="https://fonts.googleapis.com/css?family=Amaranth|Gudea|Pacifico" rel="stylesheet">
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        
+
         <link rel="stylesheet" href="../path/prettify/prettify.css">
         <link rel="stylesheet" href="../path/jquery.scrollbar.css">
-
-        <script type="text/javascript" src="../path/includes/prettify/prettify.js"></script>
         <script type="text/javascript" src="../path/jquery.scrollbar.js"></script>
-        
-        
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 	</head>
 	<body>
         <header>
@@ -34,46 +33,6 @@
             </div>
         </header>
         <main>
-        <!-- Sign in -->
-            <section class="login-box hidden">
-                <div id='login'>
-                    <i class="fa fa-window-close-o" aria-hidden="true"></i>
-                    <img src="../pict/sign.png">
-                    <h2>Zaloguj się:</h2>
-                    <form>
-                        <input type="text" name="" placeholder="Email" class="input-mail">
-                        <input type="password" name="" placeholder="********" class="input-password">
-                        <input type="submit" name="" value="Zaloguj">
-                        <a href="#">Zapomniałem hasła</a>
-                    </form>
-                </div>
-            </section>
-        <!-- Forget password -->
-            <section class='login-box hidden' id='forget_password'>
-                <div>
-                    <i class="fa fa-window-close-o" aria-hidden="true"></i>
-                    <h2>Przypomnij hasło:</h2>
-                    <form>
-                        <input type="text" name="" placeholder="Email" class="input-mail">
-                        <input type="submit" name="" value="Przypomnij hasło">
-                    </form>
-                </div>
-            </section>
-        <!-- Sign Up -->
-            <section class="login-box hidden">
-                <div id="regist">
-                    <i class="fa fa-window-close-o" aria-hidden="true"></i>
-                    <img src="../pict/sign.png">
-                    <h2>Zarejestruj się:</h2>
-                    <form>
-                        <input type="text" name="" placeholder="Email" class="input-mail">
-                        <input type="password" name="" placeholder="hasło" class="input-password">
-                        <input type="password" name="" placeholder="Powtórz hasło" class="input-password">
-                        <input type="submit" name="" value="Zarejestruj">
-                        <a href="#">Posiadam konto</a>
-                    </form>
-                </div>
-            </section>
             <div id="mealTable">
                 <div id="mealPicker">
                     <div>
@@ -109,22 +68,37 @@
                             <h3 style="text-align: center" class="roundedUp">Znalezione posiłki</h3>
                             <div>
                                 <h4>pierś z indyka w sosie pomidorowo-paprykowym z kaszą gryczaną</h4>
-                                <span class="font">Składniki: Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry, Ogórek, Oliwa z oliwek, Papryka czerwona, Pomidor, Ryż Parboiled, Szpinak mrożony, Ser typu Feta, Sok pomidorowy</span>
-                                <p class="font">Koszt: 12.45zł</p>
-                            </div>
-                             <div>
-                                <h4>pierś z indyka w sosie pomidorowo-paprykowym z kaszą gryczaną</h4>
-                                <span class="font">Składniki:Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry,Ogórek,Oliwa z oliwek,Papryka czerwona,Pomidor,Ryż Parboiled, Szpinak mrożony,Ser typu Feta, Sok pomidorowy</span>
+                                <span class="font">Składniki:</span>
+                                <br />
+                                <span class="font">Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry, Ogórek, Oliwa z oliwek, Papryka czerwona, Pomidor, Ryż Parboiled, Szpinak mrożony, Ser typu Feta, Sok pomidorowy</span>
                                 <p class="font">Koszt: 12.45zł</p>
                             </div>
                             <div>
                                 <h4>pierś z indyka w sosie pomidorowo-paprykowym z kaszą gryczaną</h4>
-                                <span class="font">Składniki:Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry,Ogórek,Oliwa z oliwek,Papryka czerwona,Pomidor,Ryż Parboiled, Szpinak mrożony,Ser typu Feta, Sok pomidorowy</span>
+                                <span class="font">Składniki:</span>
+                                <br />
+                                <span class="font">Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry, Ogórek, Oliwa z oliwek, Papryka czerwona, Pomidor, Ryż Parboiled, Szpinak mrożony, Ser typu Feta, Sok pomidorowy</span>
                                 <p class="font">Koszt: 12.45zł</p>
                             </div>
                             <div>
                                 <h4>pierś z indyka w sosie pomidorowo-paprykowym z kaszą gryczaną</h4>
-                                <span class="font">Składniki:Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry,Ogórek,Oliwa z oliwek,Papryka czerwona,Pomidor,Ryż Parboiled, Szpinak mrożony,Ser typu Feta, Sok pomidorowy</span>
+                                <span class="font">Składniki:</span>
+                                <br />
+                                <span class="font">Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry, Ogórek, Oliwa z oliwek, Papryka czerwona, Pomidor, Ryż Parboiled, Szpinak mrożony, Ser typu Feta, Sok pomidorowy</span>
+                                <p class="font">Koszt: 12.45zł</p>
+                            </div>
+                            <div>
+                                <h4>pierś z indyka w sosie pomidorowo-paprykowym z kaszą gryczaną</h4>
+                                <span class="font">Składniki:</span>
+                                <br />
+                                <span class="font">Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry, Ogórek, Oliwa z oliwek, Papryka czerwona, Pomidor, Ryż Parboiled, Szpinak mrożony, Ser typu Feta, Sok pomidorowy</span>
+                                <p class="font">Koszt: 12.45zł</p>
+                            </div>
+                            <div>
+                                <h4>pierś z indyka w sosie pomidorowo-paprykowym z kaszą gryczaną</h4>
+                                <span class="font">Składniki:</span>
+                                <br />
+                                <span class="font">Jogurt naturalny 2%, Mięso z piersi kurczaka bez skóry, Ogórek, Oliwa z oliwek, Papryka czerwona, Pomidor, Ryż Parboiled, Szpinak mrożony, Ser typu Feta, Sok pomidorowy</span>
                                 <p class="font">Koszt: 12.45zł</p>
                             </div>
                         </div>
@@ -143,46 +117,12 @@
                     <div class="hButton"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
                     <div id="dataPickerContainer">
                         <ul>
-                            <li class="column">
-                                <div class="firstrow">Poniedziałek</div>
-                                <div class="row">Śniadanie</div>
-                                <div class="row">II Śniadanie</div>
-                                <div class="row">Obiad</div>
-                                <div class="row">Podwieczorek</div>
-                                <div class="row">kolacja</div>
-                            </li>
-                            <li class="column">
-                                <div class="firstrow">Wtorek</div>
-                                <div class="row">Śniadanie</div>
-                                <div class="row">II Śniadanie</div>
-                                <div class="row">Obiad</div>
-                                <div class="row">Podwieczorek</div>
-                                <div class="row">kolacja</div>
-                            </li>
-                            <li class="column">
-                                <div class="firstrow">Środa</div>
-                                <div class="row">Śniadanie</div>
-                                <div class="row">II Śniadanie</div>
-                                <div class="row">Obiad</div>
-                                <div class="row">Podwieczorek</div>
-                                <div class="row">kolacja</div>
-                            </li>
-                            <li class="column">
-                                <div class="firstrow">Czwartek</div>
-                                <div class="row">Śniadanie</div>
-                                <div class="row">II Śniadanie</div>
-                                <div class="row">Obiad</div>
-                                <div class="row">Podwieczorek</div>
-                                <div class="row">kolacja</div>
-                            </li>
                         </ul>
                     </div>
-                    <div class="hButton"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>    
+                    <div class="hButton"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
                 </div>
             </div>
-        <!-- End Sign Up/In --> 
         </main>
-        <script src="../JavaScript/signInUp.js"></script>
         <script src="../JavaScript/ulozDiete.js"></script>
 	</body>
 </html>
