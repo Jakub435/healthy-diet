@@ -1,23 +1,23 @@
 {
-  "name": "node-restapi",
+  "name": "Node",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": {
-    "name": "Adam",
-    "email": "jstutorials1@gmail.com",
-    "url": "https://www.js-tutorials.com/"
-  },
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.16.1",
-    "ejs": "^2.5.6",
-    "express": "^4.14.1",
-    "express-session": "^1.15.1",
-    "mysql": "^2.13.0",
-    "req-flash": "0.0.3"
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.1",
+    "sequelize": "^4.35.0"
   }
 }

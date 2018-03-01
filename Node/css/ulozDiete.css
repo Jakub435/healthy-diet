@@ -1,0 +1,334 @@
+.hbutton:hover{
+    background-color: rgba(150, 217, 16, 0.8);
+    cursor: pointer;
+    color: rgba(65, 84, 11, 0.65);
+}
+
+.hButton{
+    width: 5%;
+    height: 18px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgba(150, 217, 16, 0.4);
+    background-color: rgba(174, 242, 19, 0.65);
+    text-align: center;
+    padding: 21 0;
+    color: rgba(137, 178, 24, 0.65);
+}
+
+#mealTable{
+    background-image: url(back2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 10px;
+    min-height: 547px;
+    display: flex;
+}
+
+#dataPicker{
+    margin-right: 5px;
+    display: flex;
+    float:right;
+    width: 65%;
+}
+
+#mealPicker{
+    display: inline-block;
+    float: left;
+    width: 35%;
+    margin: 0 5;
+}
+
+#dataPickerContainer{
+    width: 90%;
+    overflow: hidden;
+}
+
+#dataPickerContainer ul{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0 0 15 0;
+}
+
+.column{
+    position: relative;
+    text-align: center;
+    font-family: 'Amaranth', sans-serif;
+    flex: 1 1 0;
+    float: left;
+    height: 800px;
+}
+
+.column ul{
+    display:inline-table;
+}
+
+.firstrow{
+    background-color: rgba(155, 214, 21, 0.8);
+    height: 60px;
+    border: 2px solid;
+    border-color: rgba(150, 217, 16, 0.4);
+}
+.row{
+    background-color: rgba(174, 242, 19, 0.65);
+    border: 2px solid;
+    border-radius: 0px;
+    border-color: rgba(150, 217, 16, 0.9);
+    height: 15%;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.clear{
+    clear: both;
+}
+
+.roundedUp{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.roundedDown{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.font{
+    font-family: 'Amaranth', sans-serif;
+}
+
+#mealPicker select{
+    font-family: 'Amaranth', sans-serif;
+    width: 100%;
+    height: 35px;
+    border: 2px solid;
+    text-align: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-color: rgba(150, 217, 16, 0.4);
+    background: rgba(174,242,19,0.65);
+    font-size: 130%;
+}
+#mealPicker h3{
+    margin: 0;
+    padding: 5 10;
+    background: rgb(155, 214, 21, 0.8);
+}
+
+#mealPicker input{
+    width: 90%;
+    float:right;
+    height: 35px;
+    background: transparent;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 130%;
+    border: none;
+}
+
+.awleft{
+    margin: 0;
+    float: left;
+    width: 10%;
+    height: 35px;
+    background: transparent;
+    font-size: 130%;
+}
+#search{
+    background: rgba(174,242,19,0.65);
+}
+.button{
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 500;
+    background: rgba(174,242,19,0.65);
+    text-align: center;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+}
+.button:hover{
+    background: rgba(133, 180, 27, 0.65);
+    cursor: pointer;
+}
+
+#searchMeal{
+    margin-top: 2px;
+    width: 100%;
+    max-height: 430px;
+    min-height: 430px;
+    background: rgba(134, 186, 15, 0.9);
+}
+
+    /*************** SCROLLBAR ***************/
+
+    .scroll-wrapper {
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative;
+    }
+
+    .scroll-wrapper > .scroll-content {
+        border: none !important;
+        box-sizing: content-box !important;
+        height: auto;
+        left: 0;
+        margin: 0;
+        max-height: none;
+        max-width: none !important;
+        overflow: scroll !important;
+        padding: 0;
+        position: relative !important;
+        top: 0;
+        width: auto !important;
+    }
+
+    .scroll-wrapper > .scroll-content::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+
+    .scroll-element {
+        display: none;
+    }
+    .scroll-element, .scroll-element div {
+        box-sizing: content-box;
+    }
+
+    .scroll-element.scroll-x.scroll-scrollx_visible,
+    .scroll-element.scroll-y.scroll-scrolly_visible {
+        display: block;
+    }
+
+    .scroll-element .scroll-bar,
+    .scroll-element .scroll-arrow {
+        cursor: default;
+    }
+
+    .scroll-textarea {
+        border: 1px solid #cccccc;
+        border-top-color: #999999;
+    }
+    .scroll-textarea > .scroll-content {
+        overflow: hidden !important;
+    }
+    .scroll-textarea > .scroll-content > textarea {
+        border: none !important;
+        box-sizing: border-box;
+        height: 100% !important;
+        margin: 0;
+        max-height: none !important;
+        max-width: none !important;
+        overflow: scroll !important;
+        outline: none;
+        padding: 2px;
+        position: relative !important;
+        top: 0;
+        width: 100% !important;
+    }
+    .scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+
+
+
+
+    .scrollbar-external_wrapper {
+        height: 450px !important;
+        position: relative;
+        width: auto !important;
+    }
+    .scrollbar-external {
+        height: 100%;
+        overflow: auto;
+        width: 100%;
+    }
+
+    .external-scroll_y {
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        border-radius: 5px;
+    }
+
+
+    .external-scroll_y.scroll-scrolly_visible {
+        display: block;
+        height: 378px;
+        left: 98%;
+        top: 37px;
+        width: 10px;
+    }
+
+    .external-scroll_y div
+    {
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 70%;
+    }
+
+    .scroll-bar,
+    .external-scroll_y .scroll-bar {
+        background: rgba(75, 103, 11, 0.65);
+        z-index: 12;
+    }
+    .scroll-bar:hover{
+        background: rgba(55, 83, 1, 0.65);
+    }
+
+
+    .scroll-bar {
+        width: 100px;
+    }
+    .external-scroll_y .scroll-bar {
+        height: 100px;
+        border-radius: 5px;
+    }
+/*-------------Meals-------------*/
+/*TODO*/
+.scrollbar-external div:nth-child(2n){
+    padding: 0 10;
+    margin-top: 3px;
+    border-bottom: solid 2px rgb(125, 164, 0, 0.8);
+    background: rgba(172, 239, 21, 0.54);
+    box-shadow: 2px 1px rgba(11, 62, 15, 0.43);
+}
+
+.scrollbar-external div:nth-child(2n+1){
+    padding: 0 10;
+    margin-top: 3px;
+    border-bottom: solid 2px rgb(125, 164, 0, 0.8);
+    background: rgba(230, 229, 117, 0.52);
+    box-shadow: 2px 1px rgba(11, 62, 15, 0.43);
+
+}
+
+.helper{
+    height: 100px;
+    width: 150px;
+    background: rgb(155, 214, 21, 0.8);
+    border-radius: 5px;
+    padding: 10 5;
+    z-index: 2;
+    font-size: auto;
+}
+
+.scrollbar-external h4{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    background: rgb(155, 214, 21, 0.8);
+    border-radius: 5px;
+}
+.scrollbar-external span, .scrollbar-external p{
+    font-size: 14px;
+    color: rgba(8, 8, 8, 0.7);
+}
+
+.scrollbar-external p{margin: 5 0;}
+
+.firstrow h4{margin: 10;}
