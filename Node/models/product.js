@@ -26,8 +26,8 @@ var Product = sequelize.define('product', {
 
 // create all the defined tables in the specified database.
 sequelize.sync()
-    .then(() => console.log('product table has been successfully created, if one doesn\'t exist'))
-    .catch(error => console.log('This error occured', error));
+    .then(() => console.log(''))
+    .catch(error => console.log('This error occured'));
 
 // export Product model for use in other files.
 module.exports = Product;

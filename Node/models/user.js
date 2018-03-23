@@ -19,7 +19,7 @@ var User = sequelize.define('users', {
         allowNull: false
     },
     born:{
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false
     },
     height:{

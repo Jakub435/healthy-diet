@@ -1,0 +1,44 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>zdrowePosilki.pl</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="Shortcut icon" href="logo.jpg" />
+        <link rel="stylesheet" href="header.css" />
+        <link rel="stylesheet" href="myDiet.css" />
+        <link href="https://fonts.googleapis.com/css?family=Amaranth|Gudea|Pacifico" rel="stylesheet">
+        <script src="https://use.fontawesome.com/cac9e54009.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+	</head>
+	<body>
+        <header>
+			<ul>
+                <a href="/myDiet"><li>Moja dieta</li></a>
+                <a href="/createDiet"><li>Ułóż dietę</li></a>
+                <a href="/progress"><li>Dodaj postęp</li></a>
+                <a href="/showProgress"><li>Moje postępy</li></a>
+                <a href="/logout"><li>Wyloguj</li></a>
+            </ul>
+            <div>
+                <h1>Sprintem Po Zdrowie</h1>
+            </div>
+        </header>
+        <main>
+            <div id="mealTable">
+                <h1>Twoja Dieta:</h1>
+                <div id="dataPicker">
+                    <div class="hButton"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+                    <ul id='some'></ul>
+                    <div class="hButton"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                    <div style="clear:both"></div>
+                </div>
+                <div id=container>
+
+                </div>
+            </div>
+        </main>
+        <script src="myDiet.js"></script>
+	</body>
+</html>

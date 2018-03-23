@@ -18,12 +18,16 @@ var User_meal = sequelize.define('user_meal', {
         allowNull: false
     },
     date:{
-        type: Sequelize.DATE,
+        type: Sequelize.STRING(30),
         allowNull: false
     },
     weight:{
         type: Sequelize.REAL,
         allowNull: false
+    },
+    meal_type:{
+        type: Sequelize.INTEGER(1),
+        allowNull:false
     }
 });
 

@@ -4,44 +4,36 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
 var User = require('./models/user');
-var Recipe = require('./models/recipe');
-var Meal_product = require('./models/meal_product');
-var Product = require('./models/product');
-var Progress = require('./models/progress');
-var User_meal = require('./models/user_meal');
+var query = require('./query.js')
 
 
-
-
-// invoke an instance of express application.
 var app = express();
 
-// set our application port
 app.set('port', 9000);
 
-// set morgan to log info about our requests for development use.
 app.use(morgan('dev'));
 
-// initialize body-parser to parse incoming parameters requests to req.body
+// body-parser to parse requests to req.body
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// initialize cookie-parser to allow us access the cookies stored in the browser.
+app.use(bodyParser.json());
+
 app.use(cookieParser());
 
-// initialize express-session to allow us track the logged-in user across sessions.
+var expiryDate = new Date(Date.now() + 60 * 60 * 48000); // 2 days
 app.use(session({
     key: 'user_sid',
-    secret: 'somerandomdata',
+    secret: 'topSecret',
     resave: false,
     saveUninitialized: false,
     cookie: {
-        expires: 600000
+        expires: expiryDate,
+        httpOnly: true,
+//        secure: true // htpps only
     }
 }));
 
-
-// This middleware will check if user's cookie is still saved in browser and user is not set, then automatically log the user out.
-// This usually happens when you stop your express server after login, your cookie still remains saved in the browser.
+//check user cookies
 app.use((req, res, next) => {
     if (req.cookies.user_sid && !req.session.user) {
         res.clearCookie('user_sid');
@@ -50,7 +42,7 @@ app.use((req, res, next) => {
 });
 
 
-// middleware function to check for logged-in users
+//check if user is logged-in
 var sessionChecker = (req, res, next) => {
     if (req.session.user && req.cookies.user_sid) {
         res.redirect('/myDiet');
@@ -63,28 +55,6 @@ var sessionChecker = (req, res, next) => {
 app.get('/', sessionChecker, (req, res) => {
     res.redirect('/login');
 });
-
-
-// route for user signup
-app.route('/signup')
-    .get(sessionChecker, (req, res) => {
-        res.sendFile(__dirname + '/public/signup.html');
-    })
-    .post((req, res) => {
-        User.create({
-            username: req.body.username,
-            password: req.body.password,
-            height: req.body.height,
-            born: req.body.born
-        })
-        .then(user => {
-            req.session.user = user.dataValues;
-            res.redirect('/dashboard');
-        })
-        .catch(error => {
-            res.redirect('/signup');
-        });
-    });
 
 //create public directory
 app.use(express.static('html'));
@@ -115,24 +85,151 @@ app.route('/login')
         });
     });
 
-
 // route to myDiet
 app.get('/myDiet', (req, res) => {
     if (req.session.user && req.cookies.user_sid) {
-        res.sendFile(__dirname + '/html/mojaDieta.html');
+        res.sendFile(__dirname + '/html/myDiet.html');
+    } else {
+        res.redirect('/login');
+    }
+});
+
+app.get('/myDiet/getusermeals', query.getAllUserMeals, function(req,res){
+    if (req.session.user && req.cookies.user_sid) {
+        res.json(req.data);
+    } else { res.redirect('/login'); }
+});
+
+// send meals to client
+app.get('/createDiet/getMeals/:mealType', query.getMeals ,(req,res)=>{
+    if (req.session.user && req.cookies.user_sid) {
+        res.json(req.data);
+    } else { res.redirect('/login'); }
+});
+
+//send user id and kcal to client
+app.get('/createDiet/getIdKcal', (req, res)=>{
+    if(req.session.user && req.cookies.user_sid){
+        res.json({
+            id: req.session.user.id,
+            kcal: req.session.user.kcal
+        });
+    } else { res.redirect('/login'); }
+});
+
+// route to createDiet
+app.get('/createDiet', (req, res) => {
+    if (req.session.user && req.cookies.user_sid) {
+        res.sendFile(__dirname + '/html/createDiet.html');
+    } else {
+        res.redirect('/login');
+    }
+});
+
+app.post('/createDiet',(req, res)=>{
+    if (req.session.user && req.cookies.user_sid) {
+        var meal = req.body;
+        query.setUserMeals(meal, req.session.user.id);
+        res.send(meal)
+    } else {
+        res.redirect('/login');
+    }
+});
+
+app.post('/progress',(req, res)=>{
+    if (req.session.user && req.cookies.user_sid) {
+        var progress = req.body;
+        var flag = true;
+
+        for(k in progress){
+            if(isNaN(progress[k])){
+                res.status(400);
+                flag = false;
+                break;
+            }else if(progress[k]==''){
+                progress[k]='NULL';
+            }
+        }
+
+        res.send(progress);
+        if(flag){
+            var date = new Date();
+            date = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+            progress.user_id = req.session.user.id;
+            progress.date = date;
+            query.setUserProgress(progress);
+        }
+
     } else {
         res.redirect('/login');
     }
 });
 
 
-// route to createDiet
-app.get('/createDiet', (req, res) => {
+app.post('/kcal',(req, res)=>{
     if (req.session.user && req.cookies.user_sid) {
-        res.sendFile(__dirname + '/html/ulozDiete.html');
+        var kcal = req.body;
+        var flag = true;
+
+        for(k in kcal){
+            if(isNaN(kcal[k])){
+                res.status(400);
+                console.log(kcal[k]);
+                flag = false;
+                break;
+            }else if(kcal[k]==''){
+                kcal[k]='NULL';
+            }
+        }
+
+        res.send(kcal);
+        if(flag){
+            User.update(kcal,{where:{id:req.session.user.id}});
+        }
     } else {
         res.redirect('/login');
     }
+});
+
+
+app.get('/createDiet/usermeals',query.getUserMeals,(req, res)=>{
+    if (req.session.user && req.cookies.user_sid) {
+        res.json(req.data);
+    } else {
+        res.redirect('/login');
+    }
+});
+
+// route to progress
+app.get('/progress', (req, res) => {
+    if (req.session.user && req.cookies.user_sid) {
+        res.sendFile(__dirname + '/html/addProgress.html');
+    } else {
+        res.redirect('/login');
+    }
+});
+
+app.get('/showProgress', (req, res) => {
+    if (req.session.user && req.cookies.user_sid) {
+        res.sendFile(__dirname + '/html/showProgress.html');
+    } else {
+        res.redirect('/login');
+    }
+});
+
+
+app.get('/showProgress/userprogress',query.getUserProgress, (req, res) => {
+    if (req.session.user && req.cookies.user_sid) {
+        res.json(req.data);
+    } else {
+        res.redirect('/login');
+    }
+});
+
+app.get('/progress/getUserProp', query.getUserProp ,(req,res)=>{
+    if (req.session.user && req.cookies.user_sid) {
+        res.json(req.data);
+    } else { res.redirect('/login'); }
 });
 
 // route for user logout

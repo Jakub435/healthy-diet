@@ -38,7 +38,7 @@ var Recipe = sequelize.define('recipe', {
 // create all the defined tables in the specified database.
 sequelize.sync()
     .then(() => console.log('recipe table has been successfully created, if one doesn\'t exist'))
-    .catch(error => console.log('This error occured', error));
+    .catch(error => console.log('This error occured'));
 
 // export recipe model for use in other files.
 module.exports = Recipe;

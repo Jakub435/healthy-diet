@@ -1,0 +1,78 @@
+main{
+    background-image: url(back2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    min-height: 540px;
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+}
+ul{
+    margin: 0;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10 0;
+    border-radius: 5px;
+}
+h5{
+    font-size: 20px;
+    width: 90%;
+    margin: 0 5%;
+    background:rgba(0, 59, 255, 0.6);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(255,255,255);
+}
+ul, select, option, input{
+    font-family: 'Amaranth', sans-serif;
+}
+section{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+h4{
+    margin: 0;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+}
+input[type="text"], select{
+    height: 30px;
+    font-size: 20px;
+    width: 90%;
+    margin: 0 5%;
+    text-align: center;
+    background:transparent;
+}
+input[type="radio"]{
+    margin: 10px;
+}
+li div{
+    background:rgba(0, 59, 255, 0.6);
+    width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10 0;
+}
+li div:hover{
+    cursor: pointer;
+    background:rgba(0, 59, 255, 0.7);
+    box-shadow: 1px 1px #AAA;
+}
+
+.invalid{
+    background: rgb(235, 44, 44);
+}
+
+#fixedbar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(186, 15, 15, 0.9);
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+}

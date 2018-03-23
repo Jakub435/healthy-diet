@@ -1,0 +1,16 @@
+
+main{
+    background-image: url(back2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    min-height: 640px;
+    height: 100%;
+}
+
+#graph{
+    background: rgba(255,255,255,0.7);
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+}

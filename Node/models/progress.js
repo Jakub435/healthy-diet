@@ -46,11 +46,11 @@ var Progress = sequelize.define('progress', {
         allowNull: true
     },
     user_id:{
-        type: Sequelize.REAL,
+        type: Sequelize.INTEGER,
         allowNull: true
     },
     date:{
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: true
     },
 });

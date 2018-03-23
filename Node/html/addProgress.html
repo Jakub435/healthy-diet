@@ -1,0 +1,89 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>zdrowePosilki.pl</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="Shortcut icon" href="logo.jpg" />
+        <link rel="stylesheet" href="header.css" />
+        <link rel="stylesheet" href="addProgress.css" />
+        <link href="https://fonts.googleapis.com/css?family=Amaranth|Gudea|Pacifico" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+	</head>
+	<body>
+        <header>
+			<ul>
+                <a href="/myDiet"><li>Moja dieta</li></a>
+                <a href="/createDiet"><li>Ułóż dietę</li></a>
+                <a href="/progress"><li>Dodaj postęp</li></a>
+				<a href="/showProgress"><li>Moje postępy</li></a>
+                <a href="/logout"><li>Wyloguj</li></a>
+            </ul>
+            <div>
+                <h1>Sprintem Po Zdrowie</h1>
+            </div>
+        </header>
+        <main>
+            <section id="progress">
+                <ul>
+                    <h4>Nowy dziennik postępu:</h4>
+                    <li>
+                        <h5>Płeć:</h5>
+                        <input type="radio" name="sex" value="K"/>Kobieta
+                        <input type="radio" name="sex" value="M"/>Mężczyzna
+                    </li>
+                    <li><h5>Waga[kg]:</h5><input class="bf" type="text" placeholder="Wprowadź wagę w kg"/></li>
+                    <li><h5>Obwód bicepsa[cm]:</h5><input type="text" placeholder="Wprowadź obwód w cm"/></li>
+                    <li><h5>Obwód przedramienia[cm]:</h5><input type="text" placeholder="Wprowadź obwód w cm"/></li>
+                    <li><h5>Obwód klatki piersiowej[cm]:</h5><input type="text" placeholder="Wprowadź obwód w cm"/></li>
+                    <li><h5>Obwód pasa(talii)[cm]:</h5><input class="bf" type="text" placeholder="Wprowadź obwód w cm"/></li>
+                    <li><h5>Obwód bioder[cm]:</h5><input type="text" placeholder="Wprowadź obwód w cm"/></li>
+                    <li><h5>Obwód uda[cm]:</h5><input type="text" placeholder="Wprowadź obwód w cm"/></li>
+                    <li><h5>Obwód łydki[cm]:</h5><input type="text" placeholder="Wprowadź obwód w cm"/></li>
+                    <li><h5>Zawartość tłuszczu[%]:</h5><input type="text" placeholder="Wprowadź zawartość tłuszczu w %"/></li>
+                    <li><div>Zapisz</div></li>
+                </ul>
+            </section>
+            <section id="kcal">
+                <ul>
+                    <h4>Nowa kaloryczność:</h4>
+                    <li>
+                        <h5>Płeć:</h5>
+                        <input type="radio" name="sex" value="K"/>Kobieta
+                        <input type="radio" name="sex" value="M"/>Mężczyzna
+                    </li>
+                    <li>
+                        <h5>Tryb życia:</h5>
+                        <select>
+                            <option value="1">leżący lub siedzący tryb życia, brak aktywności fizycznej</option>
+                            <option value="1.2">praca siedząca, aktywność fizyczna na niskim poziomie</option>
+                            <option value="1.4">praca nie fizyczna, trening 2 razy w tygodniu</option>
+                            <option value="1.6">lekka praca fizyczna, trening 3-4 razy w tygodniu</option>
+                            <option value="1.8">praca fizyczna, trening 5 razy w tygodniu</option>
+                            <option value="2">ciężka praca fizyczna, codzienny trening</option>
+                        </select>
+                    </li>
+                    <li>
+                        <h5>Rodzaj organizmu:</h5>
+                        <select>
+                            <option value="0">Ektomorfik</option>
+                            <option value="1">Mezomorfik</option>
+                            <option value="2">Endomorfik</option>
+                        </select>
+                    </li>
+                    <li>
+                        <h5>Cel:</h5>
+                        <input type="radio" name="goal" value="R"/>Redukcja tkanki tłuszczowej
+                        <input type="radio" name="goal" value="M"/>Budowa masy mięśniowej
+                    </li>
+                    <li><h5>Waga[kg]:</h5><input class="bf" type="text" placeholder="Wprowadź wagę w kg"/></li>
+                    <li><h5>Zapotrzebowanie kaloryczne[kcal]:</h5><input type="text" placeholder="Wprowadź ilość kcal"/></li>
+                    <li><div>Zapisz</div></li>
+                </ul>
+            </section>
+        </main>
+        <div id="fixedbar" class="font hide"></div>
+        <script src="addProgress.js"></script>
+	</body>
+</html>

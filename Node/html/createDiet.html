@@ -1,0 +1,92 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>zdrowePosilki.pl</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="Shortcut icon" href="logo.jpg" />
+        <link rel="stylesheet" href="header.css" />
+        <link rel="stylesheet" href="createDiet.css" />
+        <link href="https://fonts.googleapis.com/css?family=Amaranth|Gudea|Pacifico" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <link rel="stylesheet" href="prettify.css">
+        <link rel="stylesheet" href="jquery.scrollbar.css">
+        <script type="text/javascript" src="jquery.scrollbar.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	</head>
+	<body>
+        <header>
+			<ul>
+				<a href="/myDiet"><li>Moja dieta</li></a>
+                <a href="/createDiet"><li>Ułóż dietę</li></a>
+                <a href="/progress"><li>Dodaj postęp</li></a>
+                <a href="/showProgress"><li>Moje postępy</li></a>
+                <a href="/logout"><li>Wyloguj</li></a>
+            </ul>
+            <div>
+                <h1>Sprintem Po Zdrowie</h1>
+            </div>
+        </header>
+        <main>
+            <div id="mealTable">
+                <div id="mealPicker">
+                    <div>
+                        <h3 class="roundedUp">Posiłki:</h3>
+                        <select  id="mealType">
+                            <option value="breakfast">Śniadania</option>
+                            <option value="dinner">Obiady</option>
+                            <option value="supper">Kolacje</option>
+                            <option value="other">Pozostałe</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Sortuj według:</h3>
+                        <select id="mealSort">
+                            <option value="asc">Cena: rosnąco </option>
+                            <option value="dsc">Cena: malejąco </option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Szukaj:</h3>
+                        <div id="search">
+                            <i class="fas fa-search awleft"></i>
+                            <input type="text" id="searchInput"/>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </div>
+                    <h3 class="roundedDown">
+                    </h3>
+                    <div id="searchMeal" class="roundedUp roundedDown scrollbar-external_wrapper">
+                        <div class="scrollbar-external">
+                            <h3 style="text-align: center" class="roundedUp">Znalezione posiłki</h3>
+                        </div>
+
+                        <div class="external-scroll_y">
+                            <div class="scroll-element_outer">
+                                <div class="scroll-element_size"></div>
+                                <div class="scroll-element_track"></div>
+                                <div class="scroll-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">Zapisz Dietę</div>
+                </div>
+                <div></div>
+                <div id="dataPicker">
+                    <div class="hButton"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+                    <div id="dataPickerContainer">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="hButton"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </main>
+        <div id="fixedbar" class="font hide"></div>
+        <script src="createDiet.js"></script>
+	</body>
+</html>
